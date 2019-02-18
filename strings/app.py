@@ -7,6 +7,3 @@ if __name__ == '__main__':
 
     content = ReaderHelper.read("input.txt")
     formated_content = text_formater.format(content, max_length)
-
-    print(content)
-    print(formated_content)
