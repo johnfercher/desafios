@@ -1,4 +1,4 @@
-class ReaderHelper(object):
+class TextReader(object):
 
     @classmethod
     def read(cls, filename: str):

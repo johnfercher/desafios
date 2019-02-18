@@ -1,9 +1,13 @@
-from src.infrastructure.reader_helper import ReaderHelper
+from src.infrastructure.text_reader import TextReader
 from src.services.text_formater import TextFormater
 
 if __name__ == '__main__':
-    max_length = 40
+    length = 40
+    justified = False
     text_formater = TextFormater()
 
-    content = ReaderHelper.read("input.txt")
-    formated_content = text_formater.format(content, max_length)
+    text = TextReader.read("input.txt")
+
+    formated_text = text_formater.format(text=text, length=length, justified=justified)
+
+    print(formated_text)
