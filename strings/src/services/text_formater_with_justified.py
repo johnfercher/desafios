@@ -30,10 +30,12 @@ class TextFormaterWithJustified(ITextFormater):
     def __add_missing_spaces(self, text: str, length: int):
         spaces_to_add = SpaceJustifyHelper.get_qtd_spaces_to_add(text, length)
         space_size = SpaceJustifyHelper.get_space_size(text)
+        #print(space_size)
+        #print(text)
         spaces_added = 0
 
         try:
-            text_list = SplitHelper.split_with_delimiter(text, " "*space_size)
+            text_list = SplitHelper.split_with_delimiter(text, " ", space_size)
 
             for i in range(0, len(text_list)):
                 if text_list[i][-1] == " ":
