@@ -7,5 +7,5 @@ class TextFormater(metaclass=abc.ABCMeta):
         self._successor = successor
 
     @abc.abstractmethod
-    def format(self, text: str, length: int, justified: bool):
+    def format(self, text: str, length: int, justify: bool):
         pass

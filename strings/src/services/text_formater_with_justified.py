@@ -1,4 +1,4 @@
-from src.domain.TextFormater import TextFormater as ITextFormater
+from src.domain.services.TextFormater import TextFormater as ITextFormater
 from src.helpers.list_string_helper import ListStringHelper
 from src.helpers.space_justify_helper import SpaceJustifyHelper
 from src.helpers.split_helper import SplitHelper
@@ -6,7 +6,7 @@ from src.helpers.split_helper import SplitHelper
 
 class TextFormaterWithJustified(ITextFormater):
 
-    def format(self, text: str, length: int, justified: bool):
+    def format(self, text: str, length: int, justify: bool):
         text_list = text.split("\n")
 
         justified_text_list = [self.__justify(text, length) for text in text_list]
