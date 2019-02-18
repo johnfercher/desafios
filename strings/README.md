@@ -33,3 +33,20 @@ O exemplo de output está [neste arquivo](https://github.com/idwall/desafios/blo
 ### Extras
 
 - Parametrização da quantidade de caracteres por linha.
+
+
+## Como utilizar
+
+* Requer Python3
+
+```
+usage: app.py [-h] [--file FILE] [--length LENGTH] [--justify JUSTIFY]
+
+Format text file with max line length, may be justified.
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --file FILE        file to format
+  --length LENGTH    max line length
+  --justify JUSTIFY  justify text
+```
