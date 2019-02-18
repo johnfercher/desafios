@@ -1,6 +1,6 @@
 from src.domain.TextFormater import TextFormater as ITextFormater
-from src.services.list_string_helper import ListStringHelper
-from src.services.newline_format_helper import NewlineFormatHelper
+from src.helpers.list_string_helper import ListStringHelper
+from src.helpers.newline_format_helper import NewlineFormatHelper
 
 
 class TextFormater(ITextFormater):

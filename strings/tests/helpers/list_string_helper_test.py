@@ -1,7 +1,7 @@
-from src.services.list_string_helper import ListStringHelper
+from src.helpers.list_string_helper import ListStringHelper
 
 
-def test_string_to_formated_list_should_performy_correctly_for_length_40():
+def test_string_to_formated_list_should_limit_line_width_correctly_for_40():
     # Arrange
     text = "In the beginning God created the heavens and the earth. Now the earth was formless and empty, " \
            "darkness was over the surface of the deep, and the Spirit of God was hovering over the waters. "
@@ -17,7 +17,7 @@ def test_string_to_formated_list_should_performy_correctly_for_length_40():
         assert len(text) <= 40
 
 
-def test_string_to_formated_list_should_performy_correctly_for_length_25():
+def test_string_to_formated_list_should_limit_line_width_correctly_for_25():
     # Arrange
     text = "In the beginning God created the heavens and the earth. Now the earth was formless and empty, " \
            "darkness was over the surface of the deep, and the Spirit of God was hovering over the waters. "
@@ -33,7 +33,7 @@ def test_string_to_formated_list_should_performy_correctly_for_length_25():
         assert len(text) <= 25
 
 
-def test_string_to_formated_list_should_performy_correctly_for_length_10():
+def test_string_to_formated_list_should_limit_line_width_correctly_for_10():
     # Arrange
     text = "In the beginning God created the heavens and the earth. Now the earth was formless and empty, " \
            "darkness was over the surface of the deep, and the Spirit of God was hovering over the waters. "
@@ -49,7 +49,7 @@ def test_string_to_formated_list_should_performy_correctly_for_length_10():
         assert len(text) <= 10
 
 
-def test_list_to_string_should_perform_correctly():
+def test_list_to_string_should_concat_list_and_append_newline():
     # Arrange
     original_text = "In the beginning God created the heavens and the earth. Now the earth was formless and empty, " \
            "darkness was over the surface of the deep, and the Spirit of God was hovering over the waters. "

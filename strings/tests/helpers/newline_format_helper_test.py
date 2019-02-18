@@ -1,4 +1,4 @@
-from src.services.newline_format_helper import NewlineFormatHelper
+from src.helpers.newline_format_helper import NewlineFormatHelper
 
 
 def test_add_newline_place_holder_should_replace_double_n_with_place_holder():
