@@ -25,7 +25,6 @@ class VotesSpider(scrapy.Spider):
         scores = self.__get_all_scores(response)
         links = self.__get_all_links(response)
 
-
         for i in range(0, len(scores)):
             if int(scores[i]) >= 5000:
                 print(titles[i])
