@@ -39,8 +39,6 @@ class VotesSpider(scrapy.Spider):
 
     def __get_all_scores(self, response):
         scores_xpath = response.xpath('//div//div[@class="score likes"]')
-
-
         return [score_xpath.xpath("@title").get() for score_xpath in scores_xpath]
 
     def __get_all_links(self, response):
