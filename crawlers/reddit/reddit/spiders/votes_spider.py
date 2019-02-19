@@ -4,10 +4,20 @@ import scrapy
 class VotesSpider(scrapy.Spider):
     name = "votes"
 
-    def start_requests(self):
-        urls = ['https://old.reddit.com/r/cats/top/?sort=top&t=week']
+    def __init__(self, *args, **kwargs):
+        subs_concat = kwargs.pop('subs', [])
 
-        for url in urls:
+        if subs_concat:
+            subs = subs_concat.split(',')
+
+        self.urls = ["https://old.reddit.com/r/" + sub + "/top?sort=top&t=week" for sub in subs]
+
+        print(self.urls)
+
+        super(VotesSpider, self).__init__(*args, **kwargs)
+
+    def start_requests(self):
+        for url in self.urls:
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
@@ -28,5 +38,5 @@ class VotesSpider(scrapy.Spider):
         return [score_xpath.get() for score_xpath in scores_xpath]
 
     def __get_all_links(self, response):
-        links_xpath = response.xpath('//div//div//p//a[contains(@class, "title may-blank")]/@href')
+        links_xpath = response.xpath('//div//div//div//div//p//a[contains(@class, "title may-blank")]/@href')
         return [link_xpath.get() for link_xpath in links_xpath]
