@@ -37,8 +37,18 @@ O exemplo de output está [neste arquivo](https://github.com/idwall/desafios/blo
 
 ## Como utilizar
 
-* Requer Python3
+### Local
+```
+python3 app.py --length 30 --justify true --file input.txt
+```
 
+### Docker
+```
+sudo docker build -t .
+sudo docker run --length 30 --justify true --file input.txt
+```
+
+### Flags
 ```
 usage: app.py [-h] [--file FILE] [--length LENGTH] [--justify JUSTIFY]
 
