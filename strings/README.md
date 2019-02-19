@@ -44,8 +44,8 @@ python3 app.py --length 30 --justify true --file input.txt
 
 ### Docker
 ```
-sudo docker build -t .
-sudo docker run --length 30 --justify true --file input.txt
+sudo docker build -t strings .
+sudo docker run strings --length 30 --justify true --file input.txt
 ```
 
 ### Flags
