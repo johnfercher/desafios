@@ -29,3 +29,16 @@ Construir um robô que nos envie essa lista via Telegram sempre que receber o co
 ### Dicas
  - Use https://old.reddit.com/
  - Qualquer método para coletar os dados é válido. Caso não saiba por onde começar, procure por JSoup (Java), SeleniumHQ (Java), PhantomJS (Javascript) e Beautiful Soup (Python).
+ 
+## Como utilizar
+
+### Local
+```
+scrapy crawl votes -a subs=cats
+```
+
+### Docker
+```
+sudo docker build -t crawlers .
+sudo docker run crawlers
+```
